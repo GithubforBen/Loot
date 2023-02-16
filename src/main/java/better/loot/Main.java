@@ -1,7 +1,10 @@
 package better.loot;
 
-import better.loot.Commands.CommandManager;
+import better.loot.Commands.Debug;
+import better.loot.Items.CreateItems;
 import better.loot.Items.ItemManager;
+import better.loot.Listener.DeathListener;
+import better.loot.Listener.ListenerManager;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,7 +22,9 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        new CommandManager();
+        new ListenerManager();
+        new CreateItems();
+        getCommand("dbl").setExecutor(new Debug());
     }
 
     @Override

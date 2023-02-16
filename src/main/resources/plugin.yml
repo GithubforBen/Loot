@@ -1,6 +1,8 @@
-name: Better Loot
+name: Better_Loot
 version: '${project.version}'
 main: better.loot.Main
 api-version: 1.19
 authors: [ Super_1337 ]
 description: A Plugin that provides you server with better loot.
+commands:
+  dbl:
